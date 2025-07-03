@@ -273,7 +273,7 @@ void typeset(TeXNode node, int fracDepth) {
               sub.translate(
                   (mainGlyphWidth - sub.width) / 2.0,
                   tk == '\\lim'
-                      ? -600
+                      ? -sub.height //-600
                       : -1150); // TODO: y must depend on sub dimensions
             } else {
               sub.translate(mainGlyphWidth, -300);
