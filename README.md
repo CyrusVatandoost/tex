@@ -187,7 +187,13 @@ Example is adding `%` as a glyph.
    dart format lib/src/svg.dart lib/src/tab.dart
    ```
 4. Teach the teokenizer to recognize the new glyph.
-5. Test it.
+   Make changes to `lib/src/lex.dart` if necessary. Adding `\%` needed a change here:
+
+   ```dart
+   } else if (j == i + 1 && (ch == '{' || ch == '}' || ch == '%')) {
+   ```
+
+5. Build and test it.
    ```sh
    ./build.sh
    ```
